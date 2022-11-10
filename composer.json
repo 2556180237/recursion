@@ -1,0 +1,17 @@
+{
+    "name": "ostanin/recursion",
+    "description": "пример сложной рекурсии",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ostanin\\Recursion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitry Ostanin",
+            "email": "dmitry@ostanin.email"
+        }
+    ],
+    "require": {}
+}
