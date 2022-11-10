@@ -8,4 +8,7 @@ php result.php
 Введите адрес файла для загрузки : input.csv
 Куда сохранить результат? : result.json
 Файл сохранен в result.json
+real	0m0,168s
+user	0m0,054s
+sys	0m0,045s
 ```
