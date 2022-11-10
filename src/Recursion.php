@@ -26,11 +26,11 @@ class RecursionClass {
 		//Создаём многомерный массив по связи parent - itemName
 		$firstArray = $this->recursionFirst($elements, null);
 
-		//Получаем массив для создания дополнительной вложенности и менять ключ связки.
+		//Получаем массив для создания дополнительной вложенности и позволяет менять ключ связки.
 		$relationArray = array_unique($this->searchValueRecursive("relation", $elements));
 
 		// Данный цикл можно вывести в функцию и замкнуть, тогда можно проверять повторение любого уровня вложенность,
-		// но рекурсивные вызов, под категорий должен справляться с зависмостями.
+		// но рекурсивный вызов подкатегорий должен справляться с зависимостями.
 
 		foreach ($relationArray as $key => $relation) {
 
@@ -38,7 +38,7 @@ class RecursionClass {
 			$result = $this->recursionByElement($elements, null, $relation);
 
 			if (!empty($result)) {
-				// Формируем массив путей куда нужно дописать подкатеогрии
+				// Формируем массив путей куда нужно дописать подкатегорий
 				$map = [];
 				$this->createPathArrayRecursive($relation, 'relation', $firstArray, $map);
 
@@ -60,7 +60,7 @@ class RecursionClass {
 
 	/**
 	 * @return array
-	 * @description Создаем массив для из файла.
+	 * @description Создаем массив из файла.
 	 */
 	public function createArray() {
 		foreach ($this->iterator as $iteration) {
@@ -145,7 +145,7 @@ class RecursionClass {
 	 * @param $parent
 	 * @param $relation
 	 * @return array
-	 * @description Рекурсия по ключу, просто вызываеет не саму себя, а recursionFirst
+	 * @description Рекурсия по ключу, просто вызывает не саму себя, а recursionFirst
 	 */
 	private function recursionByElement($elements, $parent, $relation) {
 		$result = [];
